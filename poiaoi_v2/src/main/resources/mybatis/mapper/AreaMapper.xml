@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.wuti.poiaoi.mapper.AreaMapper" >
+    <resultMap id="BaseResultMap" type="cn.wuti.poiaoi.entity.AreaEntity">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="parent_id" property="parentId" />
+        <result column="level_type" property="levelType" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,parent_id,level_type
+    </sql>
+
+    <select id="getAll" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM area_region
+        ORDER BY TO_NUMBER(id) DESC
+    </select>
+
+    <select id="getOne" parameterType="java.lang.String" resultMap="BaseResultMap" >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM area_region
+        WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="cn.wuti.poiaoi.entity.AreaEntity" >
+        INSERT INTO
+        area_region
+        (id,name,parent_id,level_type)
+        VALUES
+        (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{parentId,jdbcType=VARCHAR}, #{levelType,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="update" parameterType="cn.wuti.poiaoi.entity.AreaEntity" >
+        UPDATE
+        area_region
+        SET
+        <trim  suffixOverrides="," >
+        <if test="name != null">name = #{name},</if>
+        <if test="parentId != null">parent_id = #{parentId},</if>
+        <if test="levelType != null">level_type = #{levelType},</if>
+        </trim>
+        WHERE
+        id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.String" >
+        DELETE FROM
+        area_region
+        WHERE
+        id =#{id}
+    </delete>
+</mapper>
