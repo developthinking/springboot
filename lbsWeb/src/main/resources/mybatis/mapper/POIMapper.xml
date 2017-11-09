@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wt.lbsWeb.dao.POIDao">
+    <resultMap id="BaseResultMap" type="com.wt.lbsWeb.entity.POIInfoEntity">
+        <id column="poi_id" property="poiId" />
+        <result column="province_id" property="provinceId" />
+        <result column="city_id" property="cityId" />
+        <result column="address" property="address" />
+        <result column="region_id" property="regionId" />
+        <result column="region_name" property="regionName" />
+        <result column="label" property="label" />
+        <result column="poi_name" property="poiName" />
+        <result column="lng_center" property="lngCenter" />
+        <result column="lat_center" property="latCenter" />
+        <result column="type" property="type" />
+        <result column="region_aoi" property="regionAoi" />
+        <result column="instruction" property="instruction" />
+        <result column="custom_label" property="customLabel" />
+        <result column="source" property="source" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        poi_id,province_id,city_id,address,region_id,region_name,label,poi_name,lng_center,lat_center,type,region_aoi,instruction,custom_label,source
+    </sql>
+    
+    <sql id="Where_Clause_Name_Like">
+        WHERE 1=1
+        <trim suffixOverrides=",">
+            <if test="poiId != null and poiId != ''">
+                and t.poi_id = #{poiId}
+            </if>
+            <if test="provinceId != null and provinceId != ''">
+                and t.province_id = #{provinceId}
+            </if>
+            <if test="cityId != null and cityId != ''">
+                and t.city_id = #{cityId}
+            </if>
+            <if test="address != null and address != ''">
+                and t.address = #{address}
+            </if>
+            <if test="regionId != null and regionId != ''">
+                and t.region_id = #{regionId}
+            </if>
+            <if test="regionName != null and regionName != ''">
+                and t.region_name = #{regionName}
+            </if>
+            <if test="label != null and label != ''">
+                and t.label = #{label}
+            </if>
+            <if test="poiName != null and poiName != ''">
+                and t.poi_name LIKE CONCAT(CONCAT('%', #{poiName}), '%')
+            </if>
+            <if test="lngCenter != null and lngCenter != ''">
+                and t.lng_center = #{lngCenter}
+            </if>
+            <if test="latCenter != null and latCenter != ''">
+                and t.lat_center = #{latCenter}
+            </if>
+            <if test="type != null and type != ''">
+                and t.type = #{type}
+            </if>
+            <if test="regionAoi != null and regionAoi != ''">
+                and t.region_aoi = #{regionAoi}
+            </if>
+            <if test="instruction != null and instruction != ''">
+                and t.instruction = #{instruction}
+            </if>
+            <if test="customLabel != null and customLabel != ''">
+                and t.custom_label = #{customLabel}
+            </if>
+            <if test="source != null and source != ''">
+                and t.source = #{source}
+            </if>
+            <if test="createTime != null and createTime != ''">
+                and t.create_time = #{createTime}
+            </if>
+            <if test="updateTime != null and updateTime != ''">
+                and t.update_time = #{updateTime}
+            </if>
+            <if test="delFlag != null and delFlag != ''">
+                and t.del_flag = #{delFlag}
+            </if>
+        </trim>
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="Object">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM area_poi_info
+        WHERE poi_id = #{poiId}
+    </select>
+
+    <select id="findAll" resultMap="BaseResultMap" parameterType="Object">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM area_poi_info t
+        <include refid="Where_Clause_Name_Like" />
+        ORDER BY poi_id ASC
+    </select>
+
+    <select id="findByPage" resultMap="BaseResultMap" parameterType="Object">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM area_poi_info t
+        <include refid="Where_Clause_Name_Like" />
+        ORDER BY poi_id ASC
+    </select>
+
+    <select id="findByLabelsPage" resultMap="BaseResultMap" parameterType="Object">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM area_poi_info t
+        <include refid="Where_Clause_Name_Like" />
+        AND t.custom_label IN
+        <foreach item="item" index="index" collection="labels" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        ORDER BY poi_id ASC
+    </select>
+</mapper>
