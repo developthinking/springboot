@@ -20,8 +20,12 @@ public class AreaRegionController {
 
     @RequestMapping(value = "/list")
     public PageInfo<AreaRegionEntity> listAll() {
-        Page<AreaRegionEntity> areaRegionEntities = regionService.findByPage(1, 10);
-        PageInfo<AreaRegionEntity> pageInfo = new PageInfo<>(areaRegionEntities);
-        return pageInfo;
+        try {
+            Page<AreaRegionEntity> areaRegionEntities = regionService.findByPage(null, 1, 10);
+            PageInfo<AreaRegionEntity> pageInfo = new PageInfo<>(areaRegionEntities);
+            return pageInfo;
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

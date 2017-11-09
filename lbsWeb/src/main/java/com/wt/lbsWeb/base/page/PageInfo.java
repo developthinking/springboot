@@ -59,6 +59,49 @@ public class PageInfo<T> implements Serializable {
     }
 
     /**
+     * 包装Page对象
+     *
+     * @param list
+     */
+    public PageInfo(List<T> list, Page page) {
+        if (list instanceof Collection) {
+            this.pageNum = page.getPageNum();
+            this.pageSize = page.getPageSize();
+
+            this.pages = page.getPages();
+            this.list = list;
+            this.total = page.getTotal();
+        }
+        if (list instanceof Collection) {
+            //判断页面边界
+            judgePageBoudary();
+        }
+    }
+
+    /**
+     * 包装Page对象
+     *
+     * @param list
+     */
+    public PageInfo(List<T> list, int pageNum, int pageSize, long total) {
+        if (list instanceof Collection) {
+            this.pageNum = pageNum;
+            this.pageSize = pageSize;
+            this.total = total;
+            if (total <= pageSize) {
+                this.pages = 1;
+            } else {
+                this.pages = total % pageSize == 0 ? (int)total/pageSize : (int)total/pageSize + 1;
+            }
+            this.list = list;
+        }
+        if (list instanceof Collection) {
+            //判断页面边界
+            judgePageBoudary();
+        }
+    }
+
+    /**
      * 判定页面边界
      */
     private void judgePageBoudary() {
@@ -135,5 +178,11 @@ public class PageInfo<T> implements Serializable {
         sb.append(", navigatepageNums=");
         sb.append('}');
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        long total = 1000;
+        int pageSize = 21;
+        System.out.println(total/pageSize);
     }
 }

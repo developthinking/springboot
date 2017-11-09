@@ -12,17 +12,51 @@
         id,name,parent_id,level_type
     </sql>
 
-    <select id="findAll" resultMap="BaseResultMap">
+    <sql id="Where_Clause">
+        WHERE 1=1
+        <trim suffixOverrides=",">
+            <if test="id != null and id != ''">
+                and t.id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and t.name = #{name}
+            </if>
+            <if test="parentId != null and parentId != ''">
+                and t.parent_id = #{parentId}
+            </if>
+            <if test="levelType != null and levelType != ''">
+                and t.level_type = #{levelType}
+            </if>
+        </trim>
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="Object">
         SELECT
         <include refid="Base_Column_List" />
         FROM area_region
+        WHERE id = #{id}
+    </select>
+
+    <select id="findAll" resultMap="BaseResultMap" parameterType="Object">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM area_region t
+        <include refid="Where_Clause" />
         ORDER BY TO_NUMBER(id) ASC
     </select>
 
-    <select id="findByPage" resultMap="BaseResultMap">
+    <select id="findByPage" resultMap="BaseResultMap" parameterType="Object">
         SELECT
         <include refid="Base_Column_List" />
-        FROM area_region
+        FROM area_region t
+        <include refid="Where_Clause" />
         ORDER BY TO_NUMBER(id) ASC
+    </select>
+
+    <!-- 根据二级市id查询parent_id -->
+    <select id="getParentidById" parameterType="Object" resultType="String">
+        select
+        t.parent_id
+        from area_region t where t.id = #{id} and t.level_type='2'
     </select>
 </mapper>
