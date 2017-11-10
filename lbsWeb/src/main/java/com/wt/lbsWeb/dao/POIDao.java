@@ -1,6 +1,5 @@
 package com.wt.lbsWeb.dao;
 
-import com.github.pagehelper.Page;
 import com.wt.lbsWeb.base.dao.BaseDao;
 import com.wt.lbsWeb.entity.POIInfoEntity;
 
@@ -10,5 +9,4 @@ import com.wt.lbsWeb.entity.POIInfoEntity;
  */
 public interface POIDao extends BaseDao<POIInfoEntity> {
 
-    public Page<POIInfoEntity> findByLabelsPage(Object obj);
 }

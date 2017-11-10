@@ -10,9 +10,9 @@ import java.util.List;
  */
 public interface AreaLabelDao extends BaseDao<AreaLabelEntity> {
 
-    public List<String> getSecondClassLabelsByFirstClassId(String parentId);
+    List<String> getSecondClassLabelsByFirstClassId(String parentId);
 
-    public List<String> getThirdClassLabelsByFirstClassId(String parentId);
+    List<String> getThirdClassLabelsByFirstClassId(String parentId);
 
-    public List<String> getThirdClassLabelsBySecondClassId(String parentId);
+    List<String> getThirdClassLabelsBySecondClassId(String parentId);
 }

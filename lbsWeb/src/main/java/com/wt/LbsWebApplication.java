@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(value = "com.wt.lbsWeb.dao")
+@MapperScan("com.wt.lbsWeb.dao")
 public class LbsWebApplication {
 
 	public static void main(String[] args) {

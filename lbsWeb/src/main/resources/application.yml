@@ -29,5 +29,5 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
 
-server:
-  port: 80
+#server:
+#  port: 80

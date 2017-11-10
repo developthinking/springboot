@@ -83,6 +83,12 @@
             <if test="delFlag != null and delFlag != ''">
                 and t.del_flag = #{delFlag}
             </if>
+            <if test="labels != null and labels != ''">
+                AND t.custom_label IN
+                <foreach item="item" index="index" collection="labels" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
         </trim>
     </sql>
 
@@ -106,18 +112,6 @@
         <include refid="Base_Column_List" />
         FROM area_poi_info t
         <include refid="Where_Clause_Name_Like" />
-        ORDER BY poi_id ASC
-    </select>
-
-    <select id="findByLabelsPage" resultMap="BaseResultMap" parameterType="Object">
-        SELECT
-        <include refid="Base_Column_List" />
-        FROM area_poi_info t
-        <include refid="Where_Clause_Name_Like" />
-        AND t.custom_label IN
-        <foreach item="item" index="index" collection="labels" open="(" separator="," close=")">
-            #{item}
-        </foreach>
         ORDER BY poi_id ASC
     </select>
 </mapper>

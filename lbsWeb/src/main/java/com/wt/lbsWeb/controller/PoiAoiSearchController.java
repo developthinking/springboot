@@ -16,7 +16,6 @@ import com.wt.lbsWeb.service.AOIService;
 import com.wt.lbsWeb.service.AreaLabelService;
 import com.wt.lbsWeb.service.AreaRegionService;
 import com.wt.lbsWeb.service.POIService;
-import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.ServletRequestUtils;
@@ -24,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 /**
@@ -32,7 +31,7 @@ import java.util.*;
  * Created by Administrator on 2017/11/9.
  */
 @RestController
-@RequestMapping(value = "/poiaoi")
+@RequestMapping(value = "/coordinate")
 public class PoiAoiSearchController extends BaseAction {
 
     @Autowired
@@ -78,7 +77,7 @@ public class PoiAoiSearchController extends BaseAction {
      * 需求一：根据名字或标签查找POI AOI
      */
     @RequestMapping(value = "/fun1", method = RequestMethod.GET)
-    public JSONObject searchByNameOrLabel(HttpServletRequest request, HttpServletResponse response) {
+    public JSONObject searchByNameOrLabel(HttpServletRequest request) {
         JSONObject result = new JSONObject();
         // 获取参数
         String province = UTF8Util.convertUtf8(ServletRequestUtils.getStringParameter(request, "province", ""));
@@ -186,7 +185,7 @@ public class PoiAoiSearchController extends BaseAction {
                         param.put("cityId", city);
                         param.put("delFlag", "0");
                         param.put("labels", labels);
-                        poiInfoEntities = poiService.findByLabelsPage(param, pageNumber, pageSize);
+                        poiInfoEntities = poiService.findByPage(param, pageNumber, pageSize);
                     }
 
                     for (int i=0; i<poiInfoEntities.size(); i++) {
@@ -224,7 +223,7 @@ public class PoiAoiSearchController extends BaseAction {
                         param.put("cityId", city);
                         param.put("delFlag", "0");
                         param.put("labels", labels);
-                        aoiInfoEntities = aoiService.findByLabelsPage(param, pageNumber, pageSize);
+                        aoiInfoEntities = aoiService.findByPage(param, pageNumber, pageSize);
                     }
 
                     for (int i=0; i<aoiInfoEntities.size(); i++) {
@@ -263,7 +262,7 @@ public class PoiAoiSearchController extends BaseAction {
      *      size 每页的数量
      */
     @RequestMapping(value = "/fun2", method = RequestMethod.GET)
-    public JSONObject searchByCoordinate(HttpServletRequest request, HttpServletResponse response) {
+    public JSONObject searchByCoordinate(HttpServletRequest request) {
         JSONObject result = new JSONObject();
         // 获取参数
         String coord = UTF8Util.convertUtf8(ServletRequestUtils.getStringParameter(request, "coord", ""));
@@ -434,7 +433,7 @@ public class PoiAoiSearchController extends BaseAction {
      * 需求三：根据经纬度范围查找对应POI AOI（支持标签条件）
      */
     @RequestMapping(value = "/fun3", method = RequestMethod.GET)
-    public JSONObject searchByCoordinateRange(HttpServletRequest request, HttpServletResponse response) {
+    public JSONObject searchByCoordinateRange(HttpServletRequest request) {
         JSONObject result = new JSONObject();
         // 获取参数
         String rectangle = UTF8Util.convertUtf8(ServletRequestUtils.getStringParameter(request, "rectangle", ""));

@@ -9,5 +9,5 @@ import com.wt.lbsWeb.entity.AreaRegionEntity;
  */
 public interface AreaRegionDao extends BaseDao<AreaRegionEntity> {
 
-    public String getParentidById(String id);
+    String getParentidById(String id);
 }

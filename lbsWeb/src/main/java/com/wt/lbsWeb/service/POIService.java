@@ -1,7 +1,5 @@
 package com.wt.lbsWeb.service;
 
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
 import com.wt.lbsWeb.base.service.BaseService;
 import com.wt.lbsWeb.dao.POIDao;
 import com.wt.lbsWeb.entity.POIInfoEntity;
@@ -23,8 +21,4 @@ public class POIService extends BaseService<POIInfoEntity> {
         return poiDao;
     }
 
-    public Page<POIInfoEntity> findByLabelsPage(Object param, int pageNo, int pageSize) throws Exception {
-        PageHelper.startPage(pageNo, pageSize);
-        return poiDao.findByLabelsPage(param);
-    }
 }

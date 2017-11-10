@@ -34,7 +34,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<!--<scope>provided</scope>-->
+			<scope>provided</scope>
 		</dependency>
 		<!-- oracle版权，必须从oracle安装中找出jdbc jar，手工建立目录（坐标），将jar拷贝到目录下 -->
 		<dependency>

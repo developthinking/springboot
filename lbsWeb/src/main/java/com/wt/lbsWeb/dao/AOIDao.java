@@ -1,6 +1,5 @@
 package com.wt.lbsWeb.dao;
 
-import com.github.pagehelper.Page;
 import com.wt.lbsWeb.base.dao.BaseDao;
 import com.wt.lbsWeb.entity.AOIInfoEntity;
 
@@ -9,5 +8,4 @@ import com.wt.lbsWeb.entity.AOIInfoEntity;
  */
 public interface AOIDao extends BaseDao<AOIInfoEntity> {
 
-    public Page<AOIInfoEntity> findByLabelsPage(Object obj);
 }

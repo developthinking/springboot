@@ -1,6 +1,7 @@
 package com.wt.lbsWeb.base.dao;
 
 import com.github.pagehelper.Page;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -8,11 +9,12 @@ import java.util.List;
  * BaseDao
  * Created by Administrator on 2017/11/9.
  */
+@Mapper
 public interface BaseDao<T> {
 
-    public T findById(Object id);
+    T findById(Object id);
 
-    public List<T> findAll(Object obj);
+    List<T> findAll(Object obj);
 
-    public Page<T> findByPage(Object obj);
+    Page<T> findByPage(Object obj);
 }
