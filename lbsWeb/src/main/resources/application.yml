@@ -1,10 +1,10 @@
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:oracle:thin:@172.16.13.76:1521:ORCL
+    url: jdbc:oracle:thin:*********:ORCL
     driverClassName: oracle.jdbc.driver.OracleDriver
-    username: lbs_oracle
-    password: dc1234
+    username: *****
+    password: *****
     maxActive: 20
     initialSize: 1
     maxWait: 60000
