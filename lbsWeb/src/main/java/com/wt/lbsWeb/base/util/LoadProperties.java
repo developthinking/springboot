@@ -23,7 +23,7 @@ public class LoadProperties {
         InputStream inputStream = null;
 
         try {
-            System.out.println(LoadProperties.class.getClassLoader().getResource(""));
+            //System.out.println(LoadProperties.class.getClassLoader().getResource(""));
             inputStream = LoadProperties.class.getClassLoader().getResourceAsStream(fileNameIn);
         } catch (Exception e) {
             e.printStackTrace();

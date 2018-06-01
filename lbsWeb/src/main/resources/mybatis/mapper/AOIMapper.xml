@@ -71,7 +71,7 @@
             <if test="delFlag != null and delFlag != ''">
                 and t.del_flag = #{delFlag}
             </if>
-            <if test="labels != null and labels != ''">
+            <if test="labels != null and labels.size > 0">
                 AND t.custom_label IN
                 <foreach item="item" index="index" collection="labels" open="(" separator="," close=")">
                     #{item}
