@@ -6,15 +6,11 @@ com.wt.title: wtrover
 com.wt.description: 分享生活和技术
 
 spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/spring_boot_test1?useUnicode=true&amp;charaterEncoding=utf-8
-    username: root
-    password: terry
-  jpa:
-    show-sql: true
-    properties.hibernate.hbm2ddl.auto: update
-    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/spring_boot_test1?useUnicode=true&amp;charaterEncoding=utf-8
+#    username: root
+#    password: terry
   mail:
     host: smtp.163.com
     username: youremail@163.com
