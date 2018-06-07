@@ -17,8 +17,8 @@ spring:
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
   mail:
     host: smtp.163.com
-    username: wtdevtest@163.com
-    password: 123dev
+    username: youremail@163.com
+    password: yourpwd
     default-encoding: UTF-8
     #超时时间，可选
     properties:
