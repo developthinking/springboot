@@ -1,0 +1,1202 @@
+2018-06-07 16:13:09.130  INFO 6140 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 6140 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:13:09.131  INFO 6140 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:13:09.197  INFO 6140 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:13:09 CST 2018]; root of context hierarchy
+2018-06-07 16:13:12.138  INFO 6140 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:13:12.161  INFO 6140 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:13:12.258  INFO 6140 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:13:12.259  INFO 6140 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:13:12.261  INFO 6140 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:13:12.342  INFO 6140 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:13:12.506  INFO 6140 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:13:13.181  INFO 6140 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:13:13.249  INFO 6140 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:13:13.312  WARN 6140 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailServiceImpl': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
+2018-06-07 16:13:13.312  INFO 6140 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:13:13.389  INFO 6140 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-06-07 16:13:13.481 ERROR 6140 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailServiceImpl': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) [spring-boot-test-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192) [.cp/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:236) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$2.resolveStringValue(PropertySourcesPlaceholderConfigurer.java:172) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:831) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1086) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 41 common frames omitted
+
+2018-06-07 16:13:13.516 ERROR 6140 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5d11346a] to prepare test instance [com.wuti.demo.mail.MailServiceTest@67774e29]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) ~[spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189) ~[spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131) ~[spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) ~[spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailServiceImpl': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) ~[spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:236) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$2.resolveStringValue(PropertySourcesPlaceholderConfigurer.java:172) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:831) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1086) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 41 common frames omitted
+
+2018-06-07 16:14:16.956  INFO 7372 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 7372 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:14:16.957  INFO 7372 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:14:16.991  INFO 7372 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:14:16 CST 2018]; root of context hierarchy
+2018-06-07 16:14:18.565  INFO 7372 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:14:18.580  INFO 7372 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:14:18.640  INFO 7372 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:14:18.641  INFO 7372 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:14:18.643  INFO 7372 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:14:18.673  INFO 7372 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:14:18.762  INFO 7372 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:14:19.185  INFO 7372 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:14:19.271  INFO 7372 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:14:19.855  INFO 7372 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:14:16 CST 2018]; root of context hierarchy
+2018-06-07 16:14:19.931  INFO 7372 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:14:19.932  INFO 7372 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:14:19.970  INFO 7372 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:14:19.970  INFO 7372 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:14:20.032  INFO 7372 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:14:20.445  INFO 7372 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.889 seconds (JVM running for 4.493)
+2018-06-07 16:14:21.876 ERROR 7372 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 发送简单邮件时发生异常！
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 530 Error: A secure connection is requiered(such as ssl). More information at http://service.mail.qq.com/cgi-bin/help?id=28
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:424) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.wuti.demo.service.mail.impl.MailServiceImpl.sendSimpleMail(MailServiceImpl.java:44) ~[classes/:na]
+	at com.wuti.demo.mail.MailServiceTest.testSimpleMail(MailServiceTest.java:20) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192) [.cp/:na]
+Caused by: javax.mail.AuthenticationFailedException: 530 Error: A secure connection is requiered(such as ssl). More information at http://service.mail.qq.com/cgi-bin/help?id=28
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:932) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:843) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:748) ~[javax.mail-1.5.6.jar:1.5.6]
+	at javax.mail.Service.connect(Service.java:366) ~[javax.mail-1.5.6.jar:1.5.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:421) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 33 common frames omitted
+
+2018-06-07 16:14:21.924  INFO 7372 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:14:16 CST 2018]; root of context hierarchy
+2018-06-07 16:14:21.926  INFO 7372 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:16:48.507  INFO 8568 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 8568 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:16:48.508  INFO 8568 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:16:48.550  INFO 8568 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:16:48 CST 2018]; root of context hierarchy
+2018-06-07 16:16:50.305  INFO 8568 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:16:50.319  INFO 8568 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:16:50.380  INFO 8568 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:16:50.381  INFO 8568 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:16:50.382  INFO 8568 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:16:50.417  INFO 8568 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:16:50.519  INFO 8568 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:16:51.022  INFO 8568 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:16:51.055  INFO 8568 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:16:51.538  INFO 8568 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:16:48 CST 2018]; root of context hierarchy
+2018-06-07 16:16:51.617  INFO 8568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:16:51.618  INFO 8568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:16:51.641  INFO 8568 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:16:51.641  INFO 8568 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:16:51.677  INFO 8568 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:16:51.916  INFO 8568 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.697 seconds (JVM running for 4.226)
+2018-06-07 16:16:57.323 ERROR 8568 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 发送简单邮件时发生异常！
+
+org.springframework.mail.MailSendException: Failed messages: com.sun.mail.smtp.SMTPSendFailedException: 530 5.7.57 SMTP; Client was not authenticated to send anonymous mail during MAIL FROM [HK0P153CA0014.APCP153.PROD.OUTLOOK.COM]
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:474) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.wuti.demo.service.mail.impl.MailServiceImpl.sendSimpleMail(MailServiceImpl.java:44) ~[classes/:na]
+	at com.wuti.demo.mail.MailServiceTest.testSimpleMail(MailServiceTest.java:20) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192) [.cp/:na]
+
+2018-06-07 16:16:57.329  INFO 8568 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:16:48 CST 2018]; root of context hierarchy
+2018-06-07 16:16:57.331  INFO 8568 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:19:58.794  INFO 14244 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 14244 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:19:58.794  INFO 14244 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:19:58.837  INFO 14244 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3a7442c7: startup date [Thu Jun 07 16:19:58 CST 2018]; root of context hierarchy
+2018-06-07 16:20:00.466  INFO 14244 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:20:00.498  INFO 14244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:20:00.549  INFO 14244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:20:00.551  INFO 14244 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:20:00.552  INFO 14244 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:20:00.585  INFO 14244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:20:00.674  INFO 14244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:20:01.148  INFO 14244 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:20:01.180  INFO 14244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:20:01.753  INFO 14244 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3a7442c7: startup date [Thu Jun 07 16:19:58 CST 2018]; root of context hierarchy
+2018-06-07 16:20:01.820  INFO 14244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:20:01.821  INFO 14244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:20:01.845  INFO 14244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:20:01.845  INFO 14244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:20:01.882  INFO 14244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:20:02.151  INFO 14244 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.812 seconds (JVM running for 4.35)
+2018-06-07 16:20:07.445 ERROR 14244 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 发送简单邮件时发生异常！
+
+org.springframework.mail.MailSendException: Failed messages: com.sun.mail.smtp.SMTPSendFailedException: 530 5.7.57 SMTP; Client was not authenticated to send anonymous mail during MAIL FROM [HK0P153CA0018.APCP153.PROD.OUTLOOK.COM]
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:474) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.wuti.demo.service.mail.impl.MailServiceImpl.sendSimpleMail(MailServiceImpl.java:44) ~[classes/:na]
+	at com.wuti.demo.mail.MailServiceTest.testSimpleMail(MailServiceTest.java:20) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192) [.cp/:na]
+
+2018-06-07 16:20:07.465  INFO 14244 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3a7442c7: startup date [Thu Jun 07 16:19:58 CST 2018]; root of context hierarchy
+2018-06-07 16:20:07.467  INFO 14244 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:20:57.259  INFO 7020 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 7020 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:20:57.260  INFO 7020 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:20:57.291  INFO 7020 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:20:57 CST 2018]; root of context hierarchy
+2018-06-07 16:20:58.985  INFO 7020 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:20:58.999  INFO 7020 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:20:59.069  INFO 7020 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:20:59.071  INFO 7020 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:20:59.072  INFO 7020 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:20:59.108  INFO 7020 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:20:59.192  INFO 7020 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:20:59.603  INFO 7020 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:20:59.728  INFO 7020 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:21:00.202  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:20:57 CST 2018]; root of context hierarchy
+2018-06-07 16:21:00.273  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:21:00.275  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:21:00.299  INFO 7020 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:21:00.299  INFO 7020 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:21:00.333  INFO 7020 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:21:00.614  INFO 7020 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.653 seconds (JVM running for 4.196)
+2018-06-07 16:21:09.739 ERROR 7020 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 发送简单邮件时发生异常！
+
+org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.bonc.com.cn, 25; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.bonc.com.cn. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.bonc.com.cn, 25; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.bonc.com.cn
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:432) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.wuti.demo.service.mail.impl.MailServiceImpl.sendSimpleMail(MailServiceImpl.java:44) ~[classes/:na]
+	at com.wuti.demo.mail.MailServiceTest.testSimpleMail(MailServiceTest.java:20) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192) [.cp/:na]
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.bonc.com.cn, 25; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2118) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:712) ~[javax.mail-1.5.6.jar:1.5.6]
+	at javax.mail.Service.connect(Service.java:366) ~[javax.mail-1.5.6.jar:1.5.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:421) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 33 common frames omitted
+Caused by: java.net.UnknownHostException: smtp.bonc.com.cn
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184) ~[na:1.8.0_65]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_65]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_65]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_65]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_65]
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:331) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2084) ~[javax.mail-1.5.6.jar:1.5.6]
+	... 37 common frames omitted
+
+2018-06-07 16:21:09.752  INFO 7020 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:20:57 CST 2018]; root of context hierarchy
+2018-06-07 16:21:09.756  INFO 7020 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:36:52.786  INFO 14688 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 14688 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:36:52.787  INFO 14688 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:36:52.817  INFO 14688 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:36:52 CST 2018]; root of context hierarchy
+2018-06-07 16:36:54.397  INFO 14688 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:36:54.411  INFO 14688 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:36:54.467  INFO 14688 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:36:54.468  INFO 14688 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:36:54.469  INFO 14688 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:36:54.500  INFO 14688 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:36:54.587  INFO 14688 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:36:55.058  INFO 14688 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:36:55.091  INFO 14688 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:36:55.584  INFO 14688 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:36:52 CST 2018]; root of context hierarchy
+2018-06-07 16:36:55.651  INFO 14688 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:36:55.652  INFO 14688 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:36:55.692  INFO 14688 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:36:55.692  INFO 14688 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:36:55.726  INFO 14688 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:36:55.960  INFO 14688 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.466 seconds (JVM running for 4.018)
+2018-06-07 16:36:57.129 ERROR 14688 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 发送简单邮件时发生异常！
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Error: authentication failed
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:424) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.wuti.demo.service.mail.impl.MailServiceImpl.sendSimpleMail(MailServiceImpl.java:44) ~[classes/:na]
+	at com.wuti.demo.mail.MailServiceTest.testSimpleMail(MailServiceTest.java:20) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192) [.cp/:na]
+Caused by: javax.mail.AuthenticationFailedException: 535 Error: authentication failed
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:932) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:843) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:748) ~[javax.mail-1.5.6.jar:1.5.6]
+	at javax.mail.Service.connect(Service.java:366) ~[javax.mail-1.5.6.jar:1.5.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:421) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 33 common frames omitted
+
+2018-06-07 16:36:57.143  INFO 14688 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:36:52 CST 2018]; root of context hierarchy
+2018-06-07 16:36:57.145  INFO 14688 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:41:54.482  INFO 3112 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 3112 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:41:54.483  INFO 3112 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:41:54.521  INFO 3112 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:41:54 CST 2018]; root of context hierarchy
+2018-06-07 16:41:56.048  INFO 3112 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:41:56.062  INFO 3112 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:41:56.122  INFO 3112 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:41:56.123  INFO 3112 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:41:56.124  INFO 3112 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:41:56.154  INFO 3112 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:41:56.240  INFO 3112 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:41:56.730  INFO 3112 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:41:56.762  INFO 3112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:41:57.260  INFO 3112 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:41:54 CST 2018]; root of context hierarchy
+2018-06-07 16:41:57.327  INFO 3112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:41:57.328  INFO 3112 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:41:57.358  INFO 3112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:41:57.359  INFO 3112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:41:57.417  INFO 3112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:41:57.663  INFO 3112 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.611 seconds (JVM running for 4.162)
+2018-06-07 16:41:58.409 ERROR 3112 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 发送简单邮件时发生异常！
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:424) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at com.wuti.demo.service.mail.impl.MailServiceImpl.sendSimpleMail(MailServiceImpl.java:44) ~[classes/:na]
+	at com.wuti.demo.mail.MailServiceTest.testSimpleMail(MailServiceTest.java:20) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192) [.cp/:na]
+Caused by: javax.mail.AuthenticationFailedException: 550 User has no permission
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:932) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:843) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:748) ~[javax.mail-1.5.6.jar:1.5.6]
+	at javax.mail.Service.connect(Service.java:366) ~[javax.mail-1.5.6.jar:1.5.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:421) ~[spring-context-support-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 33 common frames omitted
+
+2018-06-07 16:41:58.425  INFO 3112 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:41:54 CST 2018]; root of context hierarchy
+2018-06-07 16:41:58.428  INFO 3112 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:44:29.406  INFO 17580 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 17580 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:44:29.407  INFO 17580 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:44:29.439  INFO 17580 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:44:29 CST 2018]; root of context hierarchy
+2018-06-07 16:44:31.088  INFO 17580 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:44:31.103  INFO 17580 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:44:31.165  INFO 17580 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:44:31.166  INFO 17580 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:44:31.168  INFO 17580 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:44:31.205  INFO 17580 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:44:31.310  INFO 17580 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:44:31.819  INFO 17580 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:44:31.850  INFO 17580 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:44:32.331  INFO 17580 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:44:29 CST 2018]; root of context hierarchy
+2018-06-07 16:44:32.397  INFO 17580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:44:32.398  INFO 17580 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:44:32.427  INFO 17580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:44:32.428  INFO 17580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:44:32.476  INFO 17580 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:44:32.825  INFO 17580 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.813 seconds (JVM running for 4.36)
+2018-06-07 16:44:34.197  INFO 17580 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 简单邮件已经发送
+2018-06-07 16:44:34.214  INFO 17580 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@795509d9: startup date [Thu Jun 07 16:44:29 CST 2018]; root of context hierarchy
+2018-06-07 16:44:34.221  INFO 17580 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:47:05.393  INFO 14352 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 14352 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:47:05.394  INFO 14352 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:47:05.438  INFO 14352 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:47:05 CST 2018]; root of context hierarchy
+2018-06-07 16:47:07.009  INFO 14352 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:47:07.025  INFO 14352 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:47:07.089  INFO 14352 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:47:07.091  INFO 14352 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:47:07.092  INFO 14352 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:47:07.127  INFO 14352 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:47:07.230  INFO 14352 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:47:07.735  INFO 14352 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:47:07.767  INFO 14352 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:47:08.253  INFO 14352 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:47:05 CST 2018]; root of context hierarchy
+2018-06-07 16:47:08.319  INFO 14352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:47:08.320  INFO 14352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:47:08.345  INFO 14352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:47:08.345  INFO 14352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:47:08.382  INFO 14352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:47:08.642  INFO 14352 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.545 seconds (JVM running for 4.071)
+2018-06-07 16:47:09.018  INFO 14352 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 简单邮件已经发送
+2018-06-07 16:47:09.022  INFO 14352 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:47:05 CST 2018]; root of context hierarchy
+2018-06-07 16:47:09.024  INFO 14352 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:49:30.999  INFO 2068 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 2068 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:49:31.000  INFO 2068 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:49:31.029  INFO 2068 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:49:31 CST 2018]; root of context hierarchy
+2018-06-07 16:49:32.718  INFO 2068 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:49:32.753  INFO 2068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:49:32.819  INFO 2068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:49:32.820  INFO 2068 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:49:32.821  INFO 2068 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:49:32.853  INFO 2068 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:49:32.946  INFO 2068 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:49:33.417  INFO 2068 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:49:33.449  INFO 2068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:49:33.929  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:49:31 CST 2018]; root of context hierarchy
+2018-06-07 16:49:33.995  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:49:33.996  INFO 2068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:49:34.022  INFO 2068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:49:34.023  INFO 2068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:49:34.055  INFO 2068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:49:34.332  INFO 2068 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.693 seconds (JVM running for 4.239)
+2018-06-07 16:49:35.891  INFO 2068 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : html邮件发送成功
+2018-06-07 16:49:35.910  INFO 2068 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:49:31 CST 2018]; root of context hierarchy
+2018-06-07 16:49:35.925  INFO 2068 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:56:07.774  INFO 19056 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 19056 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:56:07.775  INFO 19056 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:56:07.806  INFO 19056 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7f485fda: startup date [Thu Jun 07 16:56:07 CST 2018]; root of context hierarchy
+2018-06-07 16:56:15.848  INFO 20044 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 20044 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:56:15.849  INFO 20044 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:56:15.891  INFO 20044 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:56:15 CST 2018]; root of context hierarchy
+2018-06-07 16:56:17.439  INFO 20044 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:56:17.452  INFO 20044 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:56:17.504  INFO 20044 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:56:17.505  INFO 20044 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:56:17.506  INFO 20044 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:56:17.538  INFO 20044 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:56:17.627  INFO 20044 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:56:18.082  INFO 20044 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:56:18.115  INFO 20044 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:56:18.591  INFO 20044 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:56:15 CST 2018]; root of context hierarchy
+2018-06-07 16:56:18.658  INFO 20044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:56:18.659  INFO 20044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:56:18.684  INFO 20044 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:56:18.685  INFO 20044 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:56:18.724  INFO 20044 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:56:18.984  INFO 20044 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.439 seconds (JVM running for 3.958)
+2018-06-07 16:57:50.713  INFO 17840 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 17840 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:57:50.714  INFO 17840 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:57:50.754  INFO 17840 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:57:50 CST 2018]; root of context hierarchy
+2018-06-07 16:57:52.285  INFO 17840 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:57:52.299  INFO 17840 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:57:52.353  INFO 17840 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:57:52.354  INFO 17840 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:57:52.355  INFO 17840 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:57:52.385  INFO 17840 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:57:52.474  INFO 17840 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:57:52.942  INFO 17840 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:57:52.976  INFO 17840 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:57:53.464  INFO 17840 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:57:50 CST 2018]; root of context hierarchy
+2018-06-07 16:57:53.532  INFO 17840 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:57:53.533  INFO 17840 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:57:53.558  INFO 17840 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:57:53.558  INFO 17840 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:57:53.595  INFO 17840 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:57:53.879  INFO 17840 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.461 seconds (JVM running for 4.0)
+2018-06-07 16:58:19.884  INFO 13892 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 13892 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 16:58:19.885  INFO 13892 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 16:58:19.929  INFO 13892 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:58:19 CST 2018]; root of context hierarchy
+2018-06-07 16:58:21.558  INFO 13892 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:58:21.572  INFO 13892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 16:58:21.632  INFO 13892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 16:58:21.633  INFO 13892 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 16:58:21.634  INFO 13892 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 16:58:21.670  INFO 13892 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 16:58:21.760  INFO 13892 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 16:58:22.276  INFO 13892 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 16:58:22.308  INFO 13892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 16:58:22.759  INFO 13892 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:58:19 CST 2018]; root of context hierarchy
+2018-06-07 16:58:22.822  INFO 13892 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 16:58:22.823  INFO 13892 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 16:58:22.855  INFO 13892 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:58:22.855  INFO 13892 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:58:22.890  INFO 13892 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 16:58:23.134  INFO 13892 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.557 seconds (JVM running for 4.088)
+2018-06-07 16:58:23.532  INFO 13892 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 带附件的邮件已经发送。
+2018-06-07 16:58:23.536  INFO 13892 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 16:58:19 CST 2018]; root of context hierarchy
+2018-06-07 16:58:23.538  INFO 13892 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:04:12.930  INFO 17024 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 17024 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 17:04:12.930  INFO 17024 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 17:04:12.970  INFO 17024 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 17:04:12 CST 2018]; root of context hierarchy
+2018-06-07 17:04:14.781  INFO 17024 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:04:14.796  INFO 17024 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 17:04:14.860  INFO 17024 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 17:04:14.861  INFO 17024 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 17:04:14.863  INFO 17024 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 17:04:14.901  INFO 17024 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 17:04:14.999  INFO 17024 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 17:04:15.527  INFO 17024 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 17:04:15.561  INFO 17024 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:04:16.155  INFO 17024 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 17:04:12 CST 2018]; root of context hierarchy
+2018-06-07 17:04:16.219  INFO 17024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 17:04:16.219  INFO 17024 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 17:04:16.240  INFO 17024 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:04:16.241  INFO 17024 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:04:16.271  INFO 17024 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:04:16.516  INFO 17024 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.946 seconds (JVM running for 4.504)
+2018-06-07 17:04:16.884  INFO 17024 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 嵌入静态资源的邮件已经发送。
+2018-06-07 17:04:16.889  INFO 17024 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4b29d1d2: startup date [Thu Jun 07 17:04:12 CST 2018]; root of context hierarchy
+2018-06-07 17:04:16.896  INFO 17024 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:17:30.740  INFO 16792 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 16792 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 17:17:30.740  INFO 16792 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 17:17:31.563  INFO 16792 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@645aa696: startup date [Thu Jun 07 17:17:31 CST 2018]; root of context hierarchy
+2018-06-07 17:17:33.016  INFO 16792 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:17:33.030  INFO 16792 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 17:17:33.106  INFO 16792 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 17:17:33.107  INFO 16792 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 17:17:33.108  INFO 16792 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 17:17:33.139  INFO 16792 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 17:17:33.227  INFO 16792 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 17:17:33.718  INFO 16792 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 17:17:33.751  INFO 16792 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:17:34.253  INFO 16792 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@645aa696: startup date [Thu Jun 07 17:17:31 CST 2018]; root of context hierarchy
+2018-06-07 17:17:34.319  INFO 16792 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 17:17:34.321  INFO 16792 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 17:17:34.344  INFO 16792 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:17:34.345  INFO 16792 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:17:34.381  INFO 16792 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:17:34.910  INFO 16792 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 4.503 seconds (JVM running for 5.063)
+2018-06-07 17:17:36.850  INFO 16792 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : html邮件发送成功
+2018-06-07 17:17:36.855  INFO 16792 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@645aa696: startup date [Thu Jun 07 17:17:31 CST 2018]; root of context hierarchy
+2018-06-07 17:17:36.858  INFO 16792 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:19:30.917  INFO 10496 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 10496 (started by Administrator in F:\springboot_work_space\demo)
+2018-06-07 17:19:30.918  INFO 10496 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 17:19:31.084  INFO 10496 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@645aa696: startup date [Thu Jun 07 17:19:31 CST 2018]; root of context hierarchy
+2018-06-07 17:19:32.681  INFO 10496 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:19:32.695  INFO 10496 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 17:19:32.753  INFO 10496 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 17:19:32.755  INFO 10496 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 17:19:32.756  INFO 10496 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 17:19:32.789  INFO 10496 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 17:19:32.890  INFO 10496 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 17:19:33.464  INFO 10496 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 17:19:33.499  INFO 10496 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:19:34.006  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@645aa696: startup date [Thu Jun 07 17:19:31 CST 2018]; root of context hierarchy
+2018-06-07 17:19:34.082  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 17:19:34.083  INFO 10496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 17:19:34.129  INFO 10496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:19:34.130  INFO 10496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:19:34.163  INFO 10496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:19:34.645  INFO 10496 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 4.024 seconds (JVM running for 4.587)
+2018-06-07 17:19:35.139  INFO 10496 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : html邮件发送成功
+2018-06-07 17:19:35.148  INFO 10496 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@645aa696: startup date [Thu Jun 07 17:19:31 CST 2018]; root of context hierarchy
+2018-06-07 17:19:35.196  INFO 10496 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:46:46.583  INFO 17920 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 17920 (started by Administrator in F:\springboot_work_space\demoMail)
+2018-06-07 17:46:46.604  INFO 17920 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 17:46:46.827  INFO 17920 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@244112c0: startup date [Thu Jun 07 17:46:46 CST 2018]; root of context hierarchy
+2018-06-07 17:46:48.802  INFO 17920 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:46:48.817  INFO 17920 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 17:46:48.882  INFO 17920 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 17:46:48.883  INFO 17920 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 17:46:48.884  INFO 17920 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 17:46:48.939  INFO 17920 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 17:46:49.202  INFO 17920 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 17:46:49.499  INFO 17920 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 17:46:49.551  INFO 17920 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:46:50.114  INFO 17920 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@244112c0: startup date [Thu Jun 07 17:46:46 CST 2018]; root of context hierarchy
+2018-06-07 17:46:50.187  INFO 17920 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 17:46:50.187  INFO 17920 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 17:46:50.213  INFO 17920 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:46:50.213  INFO 17920 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:46:50.256  INFO 17920 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:46:50.949  INFO 17920 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 4.968 seconds (JVM running for 5.908)
+2018-06-07 17:46:51.260  INFO 17920 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 简单邮件已经发送
+2018-06-07 17:46:52.218  INFO 17920 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@244112c0: startup date [Thu Jun 07 17:46:46 CST 2018]; root of context hierarchy
+2018-06-07 17:46:52.222  INFO 17920 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:47:48.192  INFO 19620 --- [main] com.wuti.demo.mail.MailServiceTest       : Starting MailServiceTest on WIN-ONIEUV5BH02 with PID 19620 (started by Administrator in F:\springboot_work_space\demoMail)
+2018-06-07 17:47:48.193  INFO 19620 --- [main] com.wuti.demo.mail.MailServiceTest       : The following profiles are active: dev
+2018-06-07 17:47:48.371  INFO 19620 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@76639310: startup date [Thu Jun 07 17:47:48 CST 2018]; root of context hierarchy
+2018-06-07 17:47:49.993  INFO 19620 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:47:50.008  INFO 19620 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 17:47:50.067  INFO 19620 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 17:47:50.068  INFO 19620 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 17:47:50.069  INFO 19620 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 17:47:50.106  INFO 19620 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 17:47:50.213  INFO 19620 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 17:47:50.397  INFO 19620 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 17:47:50.434  INFO 19620 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:47:50.996  INFO 19620 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@76639310: startup date [Thu Jun 07 17:47:48 CST 2018]; root of context hierarchy
+2018-06-07 17:47:51.062  INFO 19620 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 17:47:51.063  INFO 19620 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 17:47:51.092  INFO 19620 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:47:51.093  INFO 19620 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:47:51.133  INFO 19620 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:47:51.783  INFO 19620 --- [main] com.wuti.demo.mail.MailServiceTest       : Started MailServiceTest in 3.928 seconds (JVM running for 4.476)
+2018-06-07 17:47:52.033  INFO 19620 --- [main] c.w.d.service.mail.impl.MailServiceImpl  : 简单邮件已经发送
+2018-06-07 17:47:52.038  INFO 19620 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@76639310: startup date [Thu Jun 07 17:47:48 CST 2018]; root of context hierarchy
+2018-06-07 17:47:52.041  INFO 19620 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:55:21.645  INFO 17588 --- [restartedMain] com.wuti.demo.DemoApplication            : Starting DemoApplication on WIN-ONIEUV5BH02 with PID 17588 (F:\springboot_work_space\demoMyBatis\target\classes started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-07 17:55:21.646  INFO 17588 --- [restartedMain] com.wuti.demo.DemoApplication            : The following profiles are active: dev
+2018-06-07 17:55:21.857  INFO 17588 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a043413: startup date [Thu Jun 07 17:55:21 CST 2018]; root of context hierarchy
+2018-06-07 17:55:23.529  INFO 17588 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 12345 (http)
+2018-06-07 17:55:23.543  INFO 17588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-07 17:55:23.544  INFO 17588 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-07 17:55:23.737  INFO 17588 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2018-06-07 17:55:23.737  INFO 17588 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1882 ms
+2018-06-07 17:55:23.884  INFO 17588 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-07 17:55:23.888  INFO 17588 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-07 17:55:23.888  INFO 17588 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-07 17:55:23.888  INFO 17588 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-07 17:55:23.888  INFO 17588 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-07 17:55:24.350  INFO 17588 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:55:24.364  INFO 17588 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-07 17:55:24.421  INFO 17588 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-07 17:55:24.422  INFO 17588 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 17:55:24.423  INFO 17588 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-07 17:55:24.473  INFO 17588 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 17:55:24.584  INFO 17588 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2018-06-07 17:55:24.743  INFO 17588 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-07 17:55:24.777  INFO 17588 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 17:55:25.070  INFO 17588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a043413: startup date [Thu Jun 07 17:55:21 CST 2018]; root of context hierarchy
+2018-06-07 17:55:25.137  INFO 17588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 17:55:25.137  INFO 17588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 17:55:25.168  INFO 17588 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:55:25.168  INFO 17588 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:55:25.206  INFO 17588 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 17:55:25.792  INFO 17588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-07 17:55:25.993  INFO 17588 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-07 17:55:26.101  INFO 17588 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 12345 (http)
+2018-06-07 17:55:26.109  INFO 17588 --- [restartedMain] com.wuti.demo.DemoApplication            : Started DemoApplication in 4.834 seconds (JVM running for 5.175)
+2018-06-08 10:12:17.793  INFO 18976 --- [restartedMain] com.wuti.demo.DemoApplication            : Starting DemoApplication on WIN-ONIEUV5BH02 with PID 18976 (F:\springboot_work_space\demoMyBatis\target\classes started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:12:17.794  INFO 18976 --- [restartedMain] com.wuti.demo.DemoApplication            : The following profiles are active: dev
+2018-06-08 10:12:18.009  INFO 18976 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@946421a: startup date [Fri Jun 08 10:12:18 CST 2018]; root of context hierarchy
+2018-06-08 10:12:19.483  INFO 18976 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 12345 (http)
+2018-06-08 10:12:19.493  INFO 18976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-08 10:12:19.494  INFO 18976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-08 10:12:19.572  INFO 18976 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2018-06-08 10:12:19.573  INFO 18976 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1566 ms
+2018-06-08 10:12:19.736  INFO 18976 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-08 10:12:19.740  INFO 18976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-08 10:12:19.740  INFO 18976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-08 10:12:19.740  INFO 18976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-08 10:12:19.741  INFO 18976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-08 10:12:20.250  WARN 18976 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [F:\springboot_work_space\demoMyBatis\target\classes\com\wuti\demo\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\springboot_work_space\demoMyBatis\target\classes\mybatis\mapper\UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.neo.param.UserParam'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.neo.param.UserParam
+2018-06-08 10:12:20.252  INFO 18976 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-06-08 10:12:20.271  INFO 18976 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-06-08 10:12:20.279 ERROR 18976 --- [restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [F:\springboot_work_space\demoMyBatis\target\classes\com\wuti\demo\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\springboot_work_space\demoMyBatis\target\classes\mybatis\mapper\UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.neo.param.UserParam'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.neo.param.UserParam
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1249) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:742) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at com.wuti.demo.DemoApplication.main(DemoApplication.java:12) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_51]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\springboot_work_space\demoMyBatis\target\classes\mybatis\mapper\UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.neo.param.UserParam'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.neo.param.UserParam
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1342) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 22 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\springboot_work_space\demoMyBatis\target\classes\mybatis\mapper\UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.neo.param.UserParam'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.neo.param.UserParam
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 34 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\springboot_work_space\demoMyBatis\target\classes\mybatis\mapper\UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.neo.param.UserParam'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.neo.param.UserParam
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$4287f289.CGLIB$sqlSessionFactory$0(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$4287f289$$FastClassBySpringCGLIB$$a0657638.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358) ~[spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$4287f289.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.1.jar:1.3.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_51]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	... 35 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.neo.param.UserParam'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.neo.param.UserParam
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	... 48 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.neo.param.UserParam'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.neo.param.UserParam
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:68) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:128) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118) ~[mybatis-3.4.5.jar:3.4.5]
+	... 50 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.neo.param.UserParam'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.neo.param.UserParam
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.4.5.jar:3.4.5]
+	... 54 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.neo.param.UserParam
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.4.5.jar:3.4.5]
+	... 56 common frames omitted
+
+2018-06-08 10:14:28.041  INFO 12120 --- [restartedMain] com.wuti.demo.DemoApplication            : Starting DemoApplication on WIN-ONIEUV5BH02 with PID 12120 (F:\springboot_work_space\demoMyBatis\target\classes started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:14:28.041  INFO 12120 --- [restartedMain] com.wuti.demo.DemoApplication            : The following profiles are active: dev
+2018-06-08 10:14:28.523  INFO 12120 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64c69108: startup date [Fri Jun 08 10:14:28 CST 2018]; root of context hierarchy
+2018-06-08 10:14:30.326  INFO 12120 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 12345 (http)
+2018-06-08 10:14:30.335  INFO 12120 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-08 10:14:30.336  INFO 12120 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-08 10:14:30.415  INFO 12120 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2018-06-08 10:14:30.415  INFO 12120 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1894 ms
+2018-06-08 10:14:30.576  INFO 12120 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-08 10:14:30.579  INFO 12120 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-08 10:14:30.580  INFO 12120 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-08 10:14:30.580  INFO 12120 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-08 10:14:30.580  INFO 12120 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-08 10:14:31.374  INFO 12120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64c69108: startup date [Fri Jun 08 10:14:28 CST 2018]; root of context hierarchy
+2018-06-08 10:14:31.445  INFO 12120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:14:31.446  INFO 12120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:14:31.483  INFO 12120 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:14:31.483  INFO 12120 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:14:31.538  INFO 12120 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:14:31.582  WARN 12120 --- [restartedMain] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:14:32.123  INFO 12120 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-08 10:14:32.236  INFO 12120 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-08 10:14:32.301  INFO 12120 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 12345 (http)
+2018-06-08 10:14:32.305  INFO 12120 --- [restartedMain] com.wuti.demo.DemoApplication            : Started DemoApplication in 4.692 seconds (JVM running for 5.127)
+2018-06-08 10:16:52.643  INFO 2116 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 2116 (started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:16:52.644  INFO 2116 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 10:16:52.825  INFO 2116 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6e9e21a5: startup date [Fri Jun 08 10:16:52 CST 2018]; root of context hierarchy
+2018-06-08 10:16:54.601  INFO 2116 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6e9e21a5: startup date [Fri Jun 08 10:16:52 CST 2018]; root of context hierarchy
+2018-06-08 10:16:54.663  INFO 2116 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:16:54.664  INFO 2116 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:16:54.692  INFO 2116 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:16:54.692  INFO 2116 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:16:54.736  INFO 2116 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:16:54.771  WARN 2116 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:16:55.396  INFO 2116 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.06 seconds (JVM running for 3.575)
+2018-06-08 10:16:55.914  INFO 2116 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6e9e21a5: startup date [Fri Jun 08 10:16:52 CST 2018]; root of context hierarchy
+2018-06-08 10:17:50.829  INFO 12292 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 12292 (started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:17:50.830  INFO 12292 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 10:17:51.017  INFO 12292 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@244112c0: startup date [Fri Jun 08 10:17:51 CST 2018]; root of context hierarchy
+2018-06-08 10:17:52.778  INFO 12292 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@244112c0: startup date [Fri Jun 08 10:17:51 CST 2018]; root of context hierarchy
+2018-06-08 10:17:52.836  INFO 12292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:17:52.837  INFO 12292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:17:52.862  INFO 12292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:17:52.862  INFO 12292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:17:52.906  INFO 12292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:17:52.938  WARN 12292 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:17:53.531  INFO 12292 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.022 seconds (JVM running for 3.533)
+2018-06-08 10:17:53.987  INFO 12292 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@244112c0: startup date [Fri Jun 08 10:17:51 CST 2018]; root of context hierarchy
+2018-06-08 10:19:15.314  INFO 16340 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 16340 (started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:19:15.315  INFO 16340 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 10:19:15.514  INFO 16340 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@257e3336: startup date [Fri Jun 08 10:19:15 CST 2018]; root of context hierarchy
+2018-06-08 10:19:17.264  INFO 16340 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@257e3336: startup date [Fri Jun 08 10:19:15 CST 2018]; root of context hierarchy
+2018-06-08 10:19:17.328  INFO 16340 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:19:17.329  INFO 16340 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:19:17.355  INFO 16340 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:19:17.355  INFO 16340 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:19:17.400  INFO 16340 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:19:17.435  WARN 16340 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:19:18.065  INFO 16340 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.071 seconds (JVM running for 3.599)
+2018-06-08 10:19:18.584  INFO 16340 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@257e3336: startup date [Fri Jun 08 10:19:15 CST 2018]; root of context hierarchy
+2018-06-08 10:20:36.669  INFO 17576 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 17576 (started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:20:36.670  INFO 17576 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 10:20:36.854  INFO 17576 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@76639310: startup date [Fri Jun 08 10:20:36 CST 2018]; root of context hierarchy
+2018-06-08 10:20:38.595  INFO 17576 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@76639310: startup date [Fri Jun 08 10:20:36 CST 2018]; root of context hierarchy
+2018-06-08 10:20:38.660  INFO 17576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:20:38.661  INFO 17576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:20:38.689  INFO 17576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:20:38.689  INFO 17576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:20:38.729  INFO 17576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:20:38.763  WARN 17576 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:20:39.387  INFO 17576 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.032 seconds (JVM running for 3.543)
+2018-06-08 10:20:39.902  INFO 17576 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@76639310: startup date [Fri Jun 08 10:20:36 CST 2018]; root of context hierarchy
+2018-06-08 10:44:30.244  INFO 12256 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 12256 (started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:44:30.245  INFO 12256 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 10:44:30.585  INFO 12256 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2ae1ef17: startup date [Fri Jun 08 10:44:30 CST 2018]; root of context hierarchy
+2018-06-08 10:44:32.992  INFO 12256 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2ae1ef17: startup date [Fri Jun 08 10:44:30 CST 2018]; root of context hierarchy
+2018-06-08 10:44:33.051  INFO 12256 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:44:33.052  INFO 12256 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:44:33.078  INFO 12256 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:44:33.078  INFO 12256 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:44:33.123  INFO 12256 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:44:33.159  WARN 12256 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:44:33.768  INFO 12256 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 4.322 seconds (JVM running for 5.083)
+2018-06-08 10:44:34.931  INFO 12256 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2ae1ef17: startup date [Fri Jun 08 10:44:30 CST 2018]; root of context hierarchy
+2018-06-08 10:47:14.733  INFO 616 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 616 (started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:47:14.734  INFO 616 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 10:47:14.946  INFO 616 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6007a2f0: startup date [Fri Jun 08 10:47:14 CST 2018]; root of context hierarchy
+2018-06-08 10:47:16.691  INFO 616 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6007a2f0: startup date [Fri Jun 08 10:47:14 CST 2018]; root of context hierarchy
+2018-06-08 10:47:16.754  INFO 616 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:47:16.755  INFO 616 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:47:16.783  INFO 616 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:47:16.783  INFO 616 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:47:16.831  INFO 616 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:47:16.866  WARN 616 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:47:17.479  INFO 616 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.058 seconds (JVM running for 3.583)
+2018-06-08 10:47:17.853  INFO 616 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6007a2f0: startup date [Fri Jun 08 10:47:14 CST 2018]; root of context hierarchy
+2018-06-08 10:47:53.653  INFO 1488 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 1488 (started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:47:53.654  INFO 1488 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 10:47:53.850  INFO 1488 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@14aa1da5: startup date [Fri Jun 08 10:47:53 CST 2018]; root of context hierarchy
+2018-06-08 10:47:55.595  INFO 1488 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@14aa1da5: startup date [Fri Jun 08 10:47:53 CST 2018]; root of context hierarchy
+2018-06-08 10:47:55.655  INFO 1488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:47:55.656  INFO 1488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:47:55.682  INFO 1488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:47:55.682  INFO 1488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:47:55.729  INFO 1488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:47:55.766  WARN 1488 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:47:56.400  INFO 1488 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.066 seconds (JVM running for 3.575)
+2018-06-08 10:47:56.759  INFO 1488 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@14aa1da5: startup date [Fri Jun 08 10:47:53 CST 2018]; root of context hierarchy
+2018-06-08 10:51:10.145  INFO 10352 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 10352 (started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:51:10.145 DEBUG 10352 --- [main] com.wuti.demo.mapper.UserMapperTest      : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2018-06-08 10:51:10.145  INFO 10352 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 10:51:10.363  INFO 10352 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6fdb48f5: startup date [Fri Jun 08 10:51:10 CST 2018]; root of context hierarchy
+2018-06-08 10:51:12.106  INFO 10352 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6fdb48f5: startup date [Fri Jun 08 10:51:10 CST 2018]; root of context hierarchy
+2018-06-08 10:51:12.166  INFO 10352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:51:12.166  INFO 10352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:51:12.193  INFO 10352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:51:12.193  INFO 10352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:51:12.237  INFO 10352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:51:12.273  WARN 10352 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:51:12.901  INFO 10352 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.085 seconds (JVM running for 3.603)
+2018-06-08 10:51:13.293 DEBUG 10352 --- [main] com.wuti.demo.mapper.UserMapper.getList  : ==>  Preparing: select id, userName, passWord, user_sex, nick_name from users where 1=1 and user_sex = ? order by id desc limit ? , ? 
+2018-06-08 10:51:13.320 DEBUG 10352 --- [main] com.wuti.demo.mapper.UserMapper.getList  : ==> Parameters: WOMAN(String), 5(Integer), 5(Integer)
+2018-06-08 10:51:13.330 DEBUG 10352 --- [main] com.wuti.demo.mapper.UserMapper.getList  : <==      Total: 0
+2018-06-08 10:51:13.332 DEBUG 10352 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : ==>  Preparing: select count(1) from users where 1=1 and user_sex = ? 
+2018-06-08 10:51:13.332 DEBUG 10352 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : ==> Parameters: WOMAN(String)
+2018-06-08 10:51:13.346 DEBUG 10352 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : <==      Total: 1
+2018-06-08 10:51:13.357  INFO 10352 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6fdb48f5: startup date [Fri Jun 08 10:51:10 CST 2018]; root of context hierarchy
+2018-06-08 10:57:37.468  INFO 16812 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 16812 (started by Administrator in F:\springboot_work_space\demoMyBatis)
+2018-06-08 10:57:37.469 DEBUG 16812 --- [main] com.wuti.demo.mapper.UserMapperTest      : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2018-06-08 10:57:37.469  INFO 16812 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 10:57:37.667  INFO 16812 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@61454787: startup date [Fri Jun 08 10:57:37 CST 2018]; root of context hierarchy
+2018-06-08 10:57:39.423  INFO 16812 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@61454787: startup date [Fri Jun 08 10:57:37 CST 2018]; root of context hierarchy
+2018-06-08 10:57:39.483  INFO 16812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 10:57:39.484  INFO 16812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 10:57:39.512  INFO 16812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:57:39.512  INFO 16812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:57:39.559  INFO 16812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 10:57:39.595  WARN 16812 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-08 10:57:40.223  INFO 16812 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.073 seconds (JVM running for 3.607)
+2018-06-08 10:57:40.640 DEBUG 16812 --- [main] com.wuti.demo.mapper.UserMapper.getList  : ==>  Preparing: select id, userName, passWord, user_sex, nick_name from users where 1=1 and user_sex = ? order by id desc limit ? , ? 
+2018-06-08 10:57:40.667 DEBUG 16812 --- [main] com.wuti.demo.mapper.UserMapper.getList  : ==> Parameters: WOMAN(String), 0(Integer), 5(Integer)
+2018-06-08 10:57:40.678 DEBUG 16812 --- [main] com.wuti.demo.mapper.UserMapper.getList  : <==      Total: 1
+2018-06-08 10:57:40.679 DEBUG 16812 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : ==>  Preparing: select count(1) from users where 1=1 and user_sex = ? 
+2018-06-08 10:57:40.680 DEBUG 16812 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : ==> Parameters: WOMAN(String)
+2018-06-08 10:57:40.681 DEBUG 16812 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : <==      Total: 1
+2018-06-08 10:57:40.693  INFO 16812 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@61454787: startup date [Fri Jun 08 10:57:37 CST 2018]; root of context hierarchy
+2018-06-08 11:17:22.776  INFO 18596 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 18596 (started by Administrator in F:\springboot_work_space\demoDruid)
+2018-06-08 11:17:22.777 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapperTest      : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2018-06-08 11:17:22.777  INFO 18596 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 11:17:22.809  INFO 18596 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@529cc591: startup date [Fri Jun 08 11:17:22 CST 2018]; root of context hierarchy
+2018-06-08 11:17:25.210  INFO 18596 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@529cc591: startup date [Fri Jun 08 11:17:22 CST 2018]; root of context hierarchy
+2018-06-08 11:17:25.271  INFO 18596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 11:17:25.272  INFO 18596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 11:17:25.300  INFO 18596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 11:17:25.300  INFO 18596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 11:17:25.385  INFO 18596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 11:17:25.805  INFO 18596 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.357 seconds (JVM running for 3.878)
+2018-06-08 11:17:26.186  INFO 18596 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-06-08 11:17:26.193 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getAll   : ==>  Preparing: SELECT id, userName, passWord, user_sex, nick_name FROM users 
+2018-06-08 11:17:26.219 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getAll   : ==> Parameters: 
+2018-06-08 11:17:26.236 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getAll   : <==      Total: 2
+2018-06-08 11:17:26.269 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getList  : ==>  Preparing: select id, userName, passWord, user_sex, nick_name from users where 1=1 and user_sex = ? order by id desc limit ? , ? 
+2018-06-08 11:17:26.271 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getList  : ==> Parameters: WOMAN(String), 0(Integer), 5(Integer)
+2018-06-08 11:17:26.272 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getList  : <==      Total: 1
+2018-06-08 11:17:26.272 DEBUG 18596 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : ==>  Preparing: select count(1) from users where 1=1 and user_sex = ? 
+2018-06-08 11:17:26.272 DEBUG 18596 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : ==> Parameters: WOMAN(String)
+2018-06-08 11:17:26.274 DEBUG 18596 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : <==      Total: 1
+2018-06-08 11:17:26.278 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.delete   : ==>  Preparing: DELETE FROM users WHERE id =? 
+2018-06-08 11:17:26.279 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.delete   : ==> Parameters: 29(Long)
+2018-06-08 11:17:26.279 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.delete   : <==    Updates: 0
+2018-06-08 11:17:26.282 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : ==>  Preparing: SELECT id, userName, passWord, user_sex, nick_name FROM users WHERE id = ? 
+2018-06-08 11:17:26.283 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : ==> Parameters: 30(Long)
+2018-06-08 11:17:26.284 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : <==      Total: 1
+2018-06-08 11:17:26.285 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.update   : ==>  Preparing: UPDATE users SET userName = ?, passWord = ?, nick_name = ? WHERE id = ? 
+2018-06-08 11:17:26.285 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.update   : ==> Parameters: cc(String), c123456(String), wt(String), 30(Long)
+2018-06-08 11:17:26.445 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.update   : <==    Updates: 1
+2018-06-08 11:17:26.446 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : ==>  Preparing: SELECT id, userName, passWord, user_sex, nick_name FROM users WHERE id = ? 
+2018-06-08 11:17:26.446 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : ==> Parameters: 30(Long)
+2018-06-08 11:17:26.447 DEBUG 18596 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : <==      Total: 1
+2018-06-08 11:17:26.453  INFO 18596 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@529cc591: startup date [Fri Jun 08 11:17:22 CST 2018]; root of context hierarchy
+2018-06-08 11:17:26.459  INFO 18596 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2018-06-08 11:17:56.773  INFO 19868 --- [main] com.wuti.demo.mapper.UserMapperTest      : Starting UserMapperTest on WIN-ONIEUV5BH02 with PID 19868 (started by Administrator in F:\springboot_work_space\demoDruid)
+2018-06-08 11:17:56.775 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapperTest      : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2018-06-08 11:17:56.775  INFO 19868 --- [main] com.wuti.demo.mapper.UserMapperTest      : The following profiles are active: dev
+2018-06-08 11:17:56.806  INFO 19868 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@185d7ed4: startup date [Fri Jun 08 11:17:56 CST 2018]; root of context hierarchy
+2018-06-08 11:17:59.139  INFO 19868 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@185d7ed4: startup date [Fri Jun 08 11:17:56 CST 2018]; root of context hierarchy
+2018-06-08 11:17:59.200  INFO 19868 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 11:17:59.201  INFO 19868 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 11:17:59.229  INFO 19868 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 11:17:59.229  INFO 19868 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 11:17:59.326  INFO 19868 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 11:17:59.823  INFO 19868 --- [main] com.wuti.demo.mapper.UserMapperTest      : Started UserMapperTest in 3.37 seconds (JVM running for 3.872)
+2018-06-08 11:18:00.172  INFO 19868 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-06-08 11:18:00.180 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getAll   : ==>  Preparing: SELECT id, userName, passWord, user_sex, nick_name FROM users 
+2018-06-08 11:18:00.206 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getAll   : ==> Parameters: 
+2018-06-08 11:18:00.224 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getAll   : <==      Total: 2
+2018-06-08 11:18:00.259 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getList  : ==>  Preparing: select id, userName, passWord, user_sex, nick_name from users where 1=1 and user_sex = ? order by id desc limit ? , ? 
+2018-06-08 11:18:00.260 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getList  : ==> Parameters: WOMAN(String), 0(Integer), 5(Integer)
+2018-06-08 11:18:00.262 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getList  : <==      Total: 1
+2018-06-08 11:18:00.262 DEBUG 19868 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : ==>  Preparing: select count(1) from users where 1=1 and user_sex = ? 
+2018-06-08 11:18:00.263 DEBUG 19868 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : ==> Parameters: WOMAN(String)
+2018-06-08 11:18:00.265 DEBUG 19868 --- [main] c.wuti.demo.mapper.UserMapper.getCount   : <==      Total: 1
+2018-06-08 11:18:00.269 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.delete   : ==>  Preparing: DELETE FROM users WHERE id =? 
+2018-06-08 11:18:00.272 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.delete   : ==> Parameters: 29(Long)
+2018-06-08 11:18:00.273 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.delete   : <==    Updates: 0
+2018-06-08 11:18:00.278 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : ==>  Preparing: SELECT id, userName, passWord, user_sex, nick_name FROM users WHERE id = ? 
+2018-06-08 11:18:00.279 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : ==> Parameters: 30(Long)
+2018-06-08 11:18:00.299 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : <==      Total: 1
+2018-06-08 11:18:00.300 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.update   : ==>  Preparing: UPDATE users SET userName = ?, passWord = ?, nick_name = ? WHERE id = ? 
+2018-06-08 11:18:00.301 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.update   : ==> Parameters: cc(String), c123456(String), wt(String), 30(Long)
+2018-06-08 11:18:00.521 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.update   : <==    Updates: 1
+2018-06-08 11:18:00.521 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : ==>  Preparing: SELECT id, userName, passWord, user_sex, nick_name FROM users WHERE id = ? 
+2018-06-08 11:18:00.521 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : ==> Parameters: 30(Long)
+2018-06-08 11:18:00.522 DEBUG 19868 --- [main] com.wuti.demo.mapper.UserMapper.getOne   : <==      Total: 1
+2018-06-08 11:18:00.532  INFO 19868 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@185d7ed4: startup date [Fri Jun 08 11:17:56 CST 2018]; root of context hierarchy
+2018-06-08 11:18:00.538  INFO 19868 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2018-06-08 11:20:08.357  INFO 17436 --- [restartedMain] com.wuti.demo.DemoApplication            : Starting DemoApplication on WIN-ONIEUV5BH02 with PID 17436 (F:\springboot_work_space\demoDruid\target\classes started by Administrator in F:\springboot_work_space\demoDruid)
+2018-06-08 11:20:08.358  INFO 17436 --- [restartedMain] com.wuti.demo.DemoApplication            : The following profiles are active: dev
+2018-06-08 11:20:08.409  INFO 17436 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@280b31e6: startup date [Fri Jun 08 11:20:08 CST 2018]; root of context hierarchy
+2018-06-08 11:20:10.059  INFO 17436 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 12345 (http)
+2018-06-08 11:20:10.069  INFO 17436 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-08 11:20:10.069  INFO 17436 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-08 11:20:10.146  INFO 17436 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2018-06-08 11:20:10.146  INFO 17436 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1740 ms
+2018-06-08 11:20:10.372  INFO 17436 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-08 11:20:10.373  INFO 17436 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-06-08 11:20:10.375  INFO 17436 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-08 11:20:10.376  INFO 17436 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-08 11:20:10.376  INFO 17436 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-08 11:20:10.376  INFO 17436 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-08 11:20:10.376  INFO 17436 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-06-08 11:20:11.722  INFO 17436 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@280b31e6: startup date [Fri Jun 08 11:20:08 CST 2018]; root of context hierarchy
+2018-06-08 11:20:11.792  INFO 17436 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 11:20:11.793  INFO 17436 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 11:20:11.828  INFO 17436 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 11:20:11.828  INFO 17436 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 11:20:11.897  INFO 17436 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 11:20:12.147  INFO 17436 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-08 11:20:12.311  INFO 17436 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-08 11:20:12.313  INFO 17436 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-06-08 11:20:12.313  INFO 17436 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-08 11:20:12.316  INFO 17436 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-06-08 11:20:12.318  INFO 17436 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-06-08 11:20:12.367  INFO 17436 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 12345 (http)
+2018-06-08 11:20:12.372  INFO 17436 --- [restartedMain] com.wuti.demo.DemoApplication            : Started DemoApplication in 4.403 seconds (JVM running for 4.868)
