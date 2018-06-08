@@ -48,7 +48,7 @@ public class UserMapperTest {
 			System.out.println(user.toString());
 			user.setNickName("wt");
 			userMapper.update(user);
-			Assert.assertTrue(("neo".equals(userMapper.getOne(id).getNickName())));
+			Assert.assertTrue(("wt".equals(userMapper.getOne(id).getNickName())));
 		} else {
 			System.out.println("not find user id="+id);
 		}
